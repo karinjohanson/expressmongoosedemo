@@ -12,6 +12,7 @@ const schema = new Schema({
       enum : ['ADMIN','NOT_ADMIN'], 
       required: true
     },
+    age: { type: Number}
 })
 
 schema.set('toJSON', { virtuals: true })
