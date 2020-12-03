@@ -8,7 +8,9 @@ module.exports = async function (req, res) {
     if (req.query.age === 'true') {
       filter.age = {$exists: true}
     }
-
+    if (req.query.age === 'false') {
+      filter.age = {$exists: false}
+    }
     console.log(filter)
 
     const allUsers = await Users.find(filter)
